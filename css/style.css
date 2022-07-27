@@ -1,0 +1,106 @@
+/* General rules */
+
+@font-face {
+    font-family: 'NorseBold';
+    src: url(../assets/fonts/Norse-Bold.otf);
+}
+a {
+    color: inherit;
+}
+
+/* Hero Section */
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
+    position: relative;
+    background-image: url(../assets/images/maksym-tymchyk-06HCXSpu7Dw-unsplash.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.logo img {
+    height: 5rem;
+}
+.logo p {
+    margin: 0 .5rem;
+    font-family: NorseBold, sans-serif;
+    font-size: 4rem;
+    color: #FFF;
+}
+.logo + p {
+    font-size: .625rem;
+    color: #FFF;
+    position: absolute;
+    bottom: 0;
+}
+
+/* Content */
+
+.content {
+    font-family: 'Roboto', sans-serif;
+    flex-grow: 1;
+}
+
+.content > * {
+    padding: 2rem;
+}
+.content header {
+    background-color: #ebebeb;
+}
+
+/* Form */
+
+.main-form {
+    padding: 0;
+}
+input {
+    margin-bottom: .75rem;
+    width: 100%;
+}
+
+.form-wrapper {
+    padding: 2rem;
+    background-color: antiquewhite;
+}
+
+/* Media queries */
+
+@media screen and (min-width: 510px) {
+    .form-wrapper > div {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .form-wrapper > div > div {
+        margin-right: 2rem;
+    }
+    h2 {
+        text-align: center;
+    }
+}
+@media screen and (min-width: 768px) {
+    body {
+        display: flex;
+        height: 100vh;
+    }
+    .hero {
+        min-width: 300px;
+    }
+    .form-wrapper > div {
+        justify-content: flex-start;
+    }
+    h2 {
+        text-align: left;
+    }
+}
