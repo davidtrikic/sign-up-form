@@ -4,12 +4,19 @@
     font-family: 'NorseBold';
     src: url(../assets/fonts/Norse-Bold.otf);
 }
+:root {
+    --main-color: #275624;
+    --box-shadow: 0px 8px 22px -7px rgba(117,117,117,1);
+}
 a {
     color: inherit;
 }
+button:hover {
+    cursor: pointer;
+}
 body {
     font-family: 'Roboto', sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     display: flex;
     flex-wrap: wrap;
     height: 100vh;
@@ -21,15 +28,15 @@ body {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    /* justify-content: center; */
     align-items: center;
     min-height: 50%;
     min-width: 30%;
     position: relative;
-    background-image: url(../assets/images/maksym-tymchyk-06HCXSpu7Dw-unsplash.jpg);
+    background-image: url(../assets/images/pandu-ior-hckbnUpcm6E-unsplash.jpg);
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: 70% 50%;
 }
 .logo {
     display: flex;
@@ -59,13 +66,13 @@ body {
 /* Content */
 
 h1, h2 {
+    font-size: 1.5em;
     font-weight: 600;
 }
 .content {
     font-family: 'Roboto', sans-serif;
     flex-grow: 1;
     flex-basis: 32rem;
-    background-color: #f9fafb;
 }
 
 .content > * {
@@ -81,6 +88,14 @@ h1, h2 {
 input {
     margin-bottom: .75rem;
     width: 100%;
+    padding: .25rem .5rem;
+    font-weight: 300;
+    border: 1px solid #cecece;
+    border-radius: 4px;
+}
+input:focus {
+    outline: 2px solid var(--main-color);
+    border: none;
 }
 label {
     font-size: .8rem;
@@ -89,7 +104,7 @@ label {
 }
 .form-wrapper {
     padding: 2rem;
-    box-shadow: 0px 8px 22px -7px rgba(117,117,117,1);
+    box-shadow: var(--box-shadow)
 }
 
  .form-wrapper > div {
@@ -100,22 +115,36 @@ label {
 .form-wrapper > div > div {
     flex-grow: 1;
 }
-.main-form button {
+button[type="submit"] {
     border: none;
     padding: .75rem 2.5rem;
     margin: 2rem;
-    background-color: #275624;
+    background-color: var(--main-color);
     color: #FFF;
     border-radius: .5rem;
-    box-shadow: 0px 8px 22px -13px rgba(117,117,117,1);
-
+    box-shadow: var(--box-shadow)
 }
 form p {
     margin: 0 2rem;
 }
 form a:link,
 form a:visited {
-    color: #275624;
+    color: var(--main-color);
+}
+
+.error {
+    border: 1px solid red;
+}
+.error:focus {
+    outline: 2px solid red;
+}
+.error-text::after {
+    content: "*Passwords do not match";
+    color: red;
+    font-size: .875rem;
+    font-weight: 300;
+    position: relative;
+    bottom: 14px;
 }
 /* Media queries */
 
