@@ -74,10 +74,12 @@ body {
     padding: 2rem;
 }
 h1, h2 {
-    font-size: 1.5em;
+    font-size: 2em;
     font-weight: 600;
 }
-
+h2 {
+    font-size: 1.5em;
+}
 /* Form */
 
 .main-form {
