@@ -6,9 +6,6 @@ const passwordConfirmInput = document.querySelector('#password-confirm');
 const validatePassword = () => {
     const password = passwordInput.value;
     const passwordConfirm = passwordConfirmInput.value;
-    console.log(password);
-    
-    console.log(passwordConfirm);
 
     if(password != passwordConfirm) {
         
@@ -24,5 +21,5 @@ const validatePassword = () => {
     
 }
 
-signupForm.addEventListener('submit', function(e) {e.preventDefault();});
-passwordConfirmInput.addEventListener('input', validatePassword);
+signupForm.addEventListener('submit', function(e) {e.preventDefault();}); // Prevents form from submitting
+passwordConfirmInput.addEventListener('input', validatePassword); 

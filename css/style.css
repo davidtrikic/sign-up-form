@@ -16,7 +16,6 @@ button:hover {
 }
 body {
     font-family: 'Roboto', sans-serif;
-    font-size: 16px;
     display: flex;
     flex-wrap: wrap;
     height: 100vh;
@@ -31,8 +30,7 @@ body {
     align-items: center;
     min-height: 50%;
     min-width: 30%;
-    /* position: relative; */
-    position: fixed;
+    position: relative;
     background-image: url(../assets/images/pandu-ior-hckbnUpcm6E-unsplash.jpg);
     background-attachment: fixed;
     background-size: cover;
@@ -64,20 +62,20 @@ body {
     bottom: 0;
 }
 
-/* Content */
+/* Main content */
 
-h1, h2 {
-    font-size: 1.5em;
-    font-weight: 600;
-}
+
 .content {
     font-family: 'Roboto', sans-serif;
     flex-grow: 1;
     flex-basis: 32rem;
 }
-
 .content > * {
     padding: 2rem;
+}
+h1, h2 {
+    font-size: 1.5em;
+    font-weight: 600;
 }
 
 /* Form */
@@ -87,8 +85,8 @@ h1, h2 {
     padding-bottom: 3rem;
 }
 input {
-    margin-bottom: .75rem;
     width: 100%;
+    margin-bottom: .75rem;
     padding: .25rem .5rem;
     font-weight: 300;
     border: 1px solid #cecece;
@@ -117,13 +115,13 @@ label {
     flex-grow: 1;
 }
 button[type="submit"] {
-    border: none;
     padding: .75rem 2.5rem;
     margin: 2rem;
     background-color: var(--main-color);
     color: #FFF;
+    border: none;
     border-radius: .5rem;
-    box-shadow: var(--box-shadow)
+    box-shadow: var(--box-shadow);
 }
 form p {
     margin: 0 2rem;
@@ -132,7 +130,6 @@ form a:link,
 form a:visited {
     color: var(--main-color);
 }
-
 .error {
     border: 1px solid red;
 }
@@ -147,6 +144,7 @@ form a:visited {
     position: relative;
     bottom: 14px;
 }
+
 /* Media queries */
 
 @media screen and (min-width: 768px) {
