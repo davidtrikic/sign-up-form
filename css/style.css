@@ -7,15 +7,24 @@
 a {
     color: inherit;
 }
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+}
 
 /* Hero Section */
 
 .hero {
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
     justify-content: center;
     align-items: center;
     min-height: 500px;
+    min-width: 30%;
     position: relative;
     background-image: url(../assets/images/maksym-tymchyk-06HCXSpu7Dw-unsplash.jpg);
     background-attachment: fixed;
@@ -48,9 +57,13 @@ a {
 
 /* Content */
 
+h1, h2 {
+    font-weight: 400;
+}
 .content {
     font-family: 'Roboto', sans-serif;
     flex-grow: 1;
+    flex-basis: 32rem;
 }
 
 .content > * {
@@ -75,32 +88,19 @@ input {
     background-color: antiquewhite;
 }
 
+ .form-wrapper > div {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 2em;
+}
+.form-wrapper > div > div {
+    flex-grow: 1;
+}
+
 /* Media queries */
 
-@media screen and (min-width: 510px) {
-    .form-wrapper > div {
-        display: flex;
-        justify-content: space-evenly;
-    }
-    .form-wrapper > div > div {
-        margin-right: 2rem;
-    }
-    h2 {
-        text-align: center;
-    }
-}
 @media screen and (min-width: 768px) {
-    body {
-        display: flex;
-        height: 100vh;
-    }
-    .hero {
-        min-width: 300px;
-    }
-    .form-wrapper > div {
-        justify-content: flex-start;
-    }
-    h2 {
-        text-align: left;
+    .form-wrapper > div > div{
+        max-width: 16.5rem;
     }
 }
