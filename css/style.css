@@ -31,7 +31,8 @@ body {
     align-items: center;
     min-height: 50%;
     min-width: 30%;
-    position: relative;
+    /* position: relative; */
+    position: fixed;
     background-image: url(../assets/images/pandu-ior-hckbnUpcm6E-unsplash.jpg);
     background-attachment: fixed;
     background-size: cover;
